@@ -83,7 +83,7 @@ names(pallete_1) <-
     legend.position = "top"))
 
 ggsave(
-  "fig/arthropod_size/ext_plot_01.pdf",
+  "fig/arthropod_size/ext_plot_01_ElevTreat.pdf",
   ext_plot_01,
   width = PDF_width,
   height = PDF_height,
@@ -238,6 +238,12 @@ glm_mean_size_emmeans_VAC$emmeans %>%
   as_tibble() %>% 
   write_csv("data/output/mean_size_pairwise_treat_emmeans.csv")
 
+ggsave(
+  "fig/arthropod_size/model_plot_full.pdf",
+  model_plot_01,
+  width = PDF_width,
+  height = PDF_height,
+  units = "in")
 
 # calculate emmeans for treatments*elevation ONLY - as the effect of Patrol seems to be weird (woudl have to clean the data fro elevations 3200 and 3700 for the final graph)
 glm_mean_size_emmeans_treat <-
@@ -285,4 +291,18 @@ glm_mean_size_emmeans_treat <-
     theme(
       text = element_text(size = text_size),
       legend.position = "right"))
+
+ggsave(
+  "figures/xx_model_plot_DISCRETE_total_predation.pdf",
+  model_plot_01,
+  width = PDF_width,
+  height = PDF_height,
+  units = "in")
+
+ggsave(
+  "fig/arthropod_size/model_plot_ElevTreat.pdf",
+  model_plot_02,
+  width = PDF_width,
+  height = PDF_height,
+  units = "in")
 

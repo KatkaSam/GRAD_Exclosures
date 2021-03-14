@@ -33,7 +33,7 @@ library(performance)
 library(glmmTMB)
 
 #----------------------------------------------------------#
-# 3. graphical properties definition  -----
+# 2. graphical properties definition  -----
 #----------------------------------------------------------#
 
 theme_set(theme_classic())
